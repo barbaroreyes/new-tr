@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import 'tachyons'
+import 'tachyons' ;
+import {BrowserRouter as Router} from 'react-router-dom' ;
+import {ElementsProvider} from './contex/elements'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ElementsProvider>
+    <Router>
     <App />
+    </Router>
+    </ElementsProvider>
+   
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
